@@ -23,7 +23,7 @@ html {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 50px 1fr 1fr;
-    min-height: 100vh;
+    max-height: 100vh;
     min-width: 100%; 
     background: radial-gradient(#322F3E, #EBBD4B);
 }
@@ -65,7 +65,7 @@ html {
 
 /* Youtube Video */
 .video-container {
-    grid-area: 2 / 2 / 4 / 4; 
+    grid-area: 2 / 3 / 4 / 5; 
     display: grid;
     position: relative;
 	padding-bottom: 56.25%;
@@ -97,6 +97,7 @@ html {
     flex-wrap: wrap;
     padding: 2em;
     gap: 0.1em;
+    justify-content: center;
 }
 .img {
     border-radius: 50%;
@@ -105,6 +106,7 @@ html {
 .name {
     font-family: 'PT Sans', sans-serif;
     font-size: 1.4em;
+    justify-content: center;
 }
 .labels {
     margin-left: 0.1em;
@@ -113,6 +115,7 @@ html {
     grid-template-rows: 1 / 2;
     max-width: 60%;
     margin-bottom: 0.5em;
+    cursor: pointer;
 } 
 
 .label {
@@ -150,6 +153,7 @@ html {
 .bio {
     font-family: 'Quicksand', sans-serif;
     line-height: 1.1em;
+    justify-content: center;
 }
 
 .email-contact {
@@ -166,7 +170,7 @@ html {
 }
 /* Responsive Home*/
 @media only screen and (max-width: 600px) {
-    .nav-bar navbar {
+    .nav-bar {
         background-color: black;
         flex-wrap: nowrap;
     }
@@ -182,7 +186,11 @@ html {
         align-items: flex-start;
         background: radial-gradient(ellipse at top, #EBBD4B, #ac9250),
             radial-gradient(ellipse at bottom,  #322F3E, transparent);
+        min-height: 100vh;
         }
+    .dropdown-menu {
+        align-self: center;
+    }
         
     .video-container {
         display: inline;
@@ -214,14 +222,13 @@ html {
 
 
 /* Projects  */
-.container {
+.container-projects {
     background: radial-gradient(#322F3E, #EBBD4B);
     min-width: 100%;
-    padding: 2em;
+    padding: 3em 3em;
     display: flex;
     flex-direction: column;
-    /* display: grid;
-    grid-template: 1 / 1 / 4 / 5; */
+    
 }
 
 .main-title {
@@ -240,8 +247,19 @@ html {
     color: var(--text-color);
 }
 
-.card {
+.card-body {
     margin-bottom: 3rem;
+    align-items: stretch;
+    margin: 0 1em;
+}
+
+.card-title {
+    text-transform: uppercase;
+}
+
+.card-text {
+    font-weight: lighter;
+    font-size: 1em;
 }
 .coming-soon {
     display: none;
