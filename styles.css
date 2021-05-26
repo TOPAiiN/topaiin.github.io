@@ -112,12 +112,14 @@ html {
     font-size: 1.4em;
     display: flex;
     justify-content: center;
+    flex-basis: 100%;
 }
 .labels {
     display: flex;
-    max-width: 60%;
+    /* max-width: 60%; */
     margin-bottom: 0.5em;
     cursor: pointer;
+    justify-content: center;
 } 
 
 .label {
@@ -129,7 +131,7 @@ html {
     display: grid;
     grid-area: 1 / 1 / 2 / 2;
     padding: 0.3em;
-    align-self: center;
+    
 }
 
 .CSS {
@@ -138,7 +140,7 @@ html {
     display: grid;
     grid-area: 1 / 2 / 2 / 3;
     padding: 0.3em;
-    align-self: center;
+    
 }
 .Javascript {
     background-color: var(--accent-color);
